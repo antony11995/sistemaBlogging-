@@ -1,0 +1,10 @@
+<!--crear campos -->
+   <label>Título:</label>
+   <input type="text" [(ngModel)]="nuevaNoticia.titulo">
+   <label>Imagen (URL):</label>
+   <input type="text" [(ngModel)]="nuevaNoticia.imagen">
+   <label>Texto:</label>
+   <textarea [(ngModel)]="nuevaNoticia.texto"></textarea>
+   <label>Fecha de Publicación:</label>
+   <input type="date" [(ngModel)]="nuevaNoticia.fechaPublicacion">
+   <button (click)="agregarNoticia()">Agregar Noticia</button>
