@@ -16,15 +16,23 @@
   </section>
   <section class="seccion-noticias">
     <h2 class="titulo-noticias">Noticias</h2>
-    <div *ngFor="let noticia of noticias" class="tarjeta-noticia">
-      <div class="imagen-noticia" *ngIf="noticia.imagen">
-        <img [src]="noticia.imagen" alt="Imagen de la noticia">
+    <!-- <div *ngFor="let noticia of noticias" class="tarjeta-noticia"> -->
+    <div class="tarjeta-noticia">
+      @for (noticiaInd of noticias; track noticiaInd){
+         @if (noticiaInd.imagen) {
+            <div class="imagen-noticia">
+        <img [src]="noticiaInd.imagen" alt="Imagen de la noticia">
       </div>
+         } 
+         <!-- <div class="imagen-noticia" *ngIf="noticiaInd.imagen"> -->
       <div class="contenido-noticia">
-        <h3 class="titulo-noticia">{{ noticia.titulo }}</h3>
-        <p class="texto-noticia">{{ noticia.texto }}</p>
-        <p class="fecha-noticia">{{ noticia.fechaPublicacion }}</p>
+        <h3 class="titulo-noticia">{{ noticiaInd.titulo }}</h3>
+        <p class="texto-noticia">{{ noticiaInd.texto }}</p>
+        <p class="fecha-noticia">{{ noticiaInd.fechaPublicacion }}</p>
       </div>
+
+      }
+      
     </div>
   </section>
 </div>
