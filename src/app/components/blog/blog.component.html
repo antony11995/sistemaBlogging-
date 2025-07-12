@@ -1,10 +1,30 @@
-<!--crear campos -->
-   <label>Título:</label>
-   <input type="text" [(ngModel)]="nuevaNoticia.titulo">
-   <label>Imagen (URL):</label>
-   <input type="text" [(ngModel)]="nuevaNoticia.imagen">
-   <label>Texto:</label>
-   <textarea [(ngModel)]="nuevaNoticia.texto"></textarea>
-   <label>Fecha de Publicación:</label>
-   <input type="date" [(ngModel)]="nuevaNoticia.fechaPublicacion">
-   <button (click)="agregarNoticia()">Agregar Noticia</button>
+
+<div class="contenedor-blog">
+  <section class="seccion-formulario">
+    <h2 class="titulo-formulario">Agregar Nueva Noticia</h2>
+    <form class="formulario-noticia">
+      <label class="etiqueta-formulario">Título</label>
+      <input class="campo-formulario" type="text" [(ngModel)]="nuevaNoticia.titulo" name="titulo" required>
+      <label class="etiqueta-formulario">URL de la Imagen</label>
+      <input class="campo-formulario" type="text" [(ngModel)]="nuevaNoticia.imagen" name="imagen" required>
+      <label class="etiqueta-formulario">Texto</label>
+      <textarea class="campo-formulario" [(ngModel)]="nuevaNoticia.texto" name="texto" required></textarea>
+      <label class="etiqueta-formulario">Fecha de Publicación</label>
+      <input class="campo-formulario" type="date" [(ngModel)]="nuevaNoticia.fechaPublicacion" name="fechaPublicacion" required>
+      <button class="boton-agregar" type="button" (click)="agregarNoticia()">Agregar Noticia</button>
+    </form>
+  </section>
+  <section class="seccion-noticias">
+    <h2 class="titulo-noticias">Noticias Recientes</h2>
+    <div *ngFor="let noticia of noticias" class="tarjeta-noticia">
+      <div class="imagen-noticia" *ngIf="noticia.imagen">
+        <img [src]="noticia.imagen" alt="Imagen de la noticia">
+      </div>
+      <div class="contenido-noticia">
+        <h3 class="titulo-noticia">{{ noticia.titulo }}</h3>
+        <p class="texto-noticia">{{ noticia.texto }}</p>
+        <p class="fecha-noticia">{{ noticia.fechaPublicacion }}</p>
+      </div>
+    </div>
+  </section>
+</div>

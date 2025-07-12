@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IEntradaBlog } from '../../interfaces/ientrada-blog.interface';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-blog',
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })
