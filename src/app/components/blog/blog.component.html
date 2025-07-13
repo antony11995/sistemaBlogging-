@@ -16,11 +16,8 @@
   </section>
   <section class="seccion-noticias">
     <h2 class="titulo-noticias">Noticias</h2>
-    <!-- <div *ngFor="let noticia of noticias" class="tarjeta-noticia"> -->
     <div class="tarjeta-noticia">
       @for (noticiaInd of noticias; track noticiaInd){
-          
-         <!-- <div class="imagen-noticia" *ngIf="noticiaInd.imagen"> -->
       <div class="contenido-noticia">         
         <h3 class="titulo-noticia">{{ noticiaInd.titulo }}</h3>
         @if (noticiaInd.imagen) {
