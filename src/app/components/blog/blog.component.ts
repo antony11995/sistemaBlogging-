@@ -45,7 +45,7 @@ export class BlogComponent {
   agregarNoticia() {
     if (this.nuevaNoticia.titulo && this.nuevaNoticia.imagen && this.nuevaNoticia.texto && this.nuevaNoticia.fechaPublicacion) {
       this.nuevaNoticia.fechaPublicacion = this.formatearFecha(this.nuevaNoticia.fechaPublicacion);
-      this.noticias.unshift({ ...this.nuevaNoticia });
+      this.noticias.unshift(this.nuevaNoticia );
       this.nuevaNoticia = { titulo: '', imagen: '', texto: '', fechaPublicacion: '' };
       console.log('Noticia agregada:', this.noticias);
     } else {
