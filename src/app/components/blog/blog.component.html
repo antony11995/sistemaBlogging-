@@ -3,13 +3,13 @@
   <section class="seccion-formulario">
     <h2 class="titulo-formulario">Agregar Nueva Noticia</h2>
     <form class="formulario-noticia">
-      <label class="etiqueta-formulario">Título</label>
+      <label class="etiqueta-formulario required">Título</label>
       <input class="campo-formulario" type="text" [(ngModel)]="nuevaNoticia.titulo" name="titulo">
-      <label class="etiqueta-formulario">URL de la Imagen</label>
+      <label class="etiqueta-formulario required">URL de la Imagen</label>
       <input class="campo-formulario" type="text" [(ngModel)]="nuevaNoticia.imagen" name="imagen">
-      <label class="etiqueta-formulario">Texto</label>
+      <label class="etiqueta-formulario required">Texto</label>
       <textarea class="campo-formulario-texto" [(ngModel)]="nuevaNoticia.texto" name="texto"></textarea>
-      <label class="etiqueta-formulario">Fecha de Publicación</label>
+      <label class="etiqueta-formulario required">Fecha de Publicación</label>
       <input class="campo-formulario" type="date" [(ngModel)]="nuevaNoticia.fechaPublicacion" name="fechaPublicacion">
       <button class="boton-agregar" type="button" (click)="agregarNoticia()">Agregar Noticia</button>
     </form>

@@ -47,7 +47,15 @@ export class BlogComponent {
       this.nuevaNoticia.fechaPublicacion = this.formatearFecha(this.nuevaNoticia.fechaPublicacion);
       this.noticias.unshift(this.nuevaNoticia );
       this.nuevaNoticia = { titulo: '', imagen: '', texto: '', fechaPublicacion: '' };
-    } else {
+    }else if(this.nuevaNoticia.titulo==='') {
+      alert('Por favor, completa el título de la noticia.');
+    }else if(this.nuevaNoticia.imagen==='') {
+      alert('Por favor, completa la URL de la imagen.');
+    }else if(this.nuevaNoticia.texto==='') {
+      alert('Por favor, completa el texto de la noticia.');
+    }else if(this.nuevaNoticia.fechaPublicacion==='') {
+      alert('Por favor, completa la fecha de publicación.');
+    }else {
       alert('Por favor, completa todos los campos.');
     }
   }

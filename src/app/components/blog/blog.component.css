@@ -125,6 +125,12 @@
 }
 
 
+label.required::after {
+content: " *";
+color: red;
+}
+
+
 /* Pantallas Grandes */
 @media (min-width: 900px) {
   .contenedor-blog {
