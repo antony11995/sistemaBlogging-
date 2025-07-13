@@ -4,13 +4,13 @@
     <h2 class="titulo-formulario">Agregar Nueva Noticia</h2>
     <form class="formulario-noticia">
       <label class="etiqueta-formulario">Título</label>
-      <input class="campo-formulario" type="text" [(ngModel)]="nuevaNoticia.titulo" name="titulo" required>
+      <input class="campo-formulario" type="text" [(ngModel)]="nuevaNoticia.titulo" name="titulo">
       <label class="etiqueta-formulario">URL de la Imagen</label>
-      <input class="campo-formulario" type="text" [(ngModel)]="nuevaNoticia.imagen" name="imagen" required>
+      <input class="campo-formulario" type="text" [(ngModel)]="nuevaNoticia.imagen" name="imagen">
       <label class="etiqueta-formulario">Texto</label>
-      <textarea class="campo-formulario" [(ngModel)]="nuevaNoticia.texto" name="texto" required></textarea>
+      <textarea class="campo-formulario-texto" [(ngModel)]="nuevaNoticia.texto" name="texto"></textarea>
       <label class="etiqueta-formulario">Fecha de Publicación</label>
-      <input class="campo-formulario" type="date" [(ngModel)]="nuevaNoticia.fechaPublicacion" name="fechaPublicacion" required>
+      <input class="campo-formulario" type="date" [(ngModel)]="nuevaNoticia.fechaPublicacion" name="fechaPublicacion">
       <button class="boton-agregar" type="button" (click)="agregarNoticia()">Agregar Noticia</button>
     </form>
   </section>
@@ -25,8 +25,8 @@
         <h3 class="titulo-noticia">{{ noticiaInd.titulo }}</h3>
         @if (noticiaInd.imagen) {
             <div class="imagen-noticia">
-        <img [src]="noticiaInd.imagen" alt="Imagen de la noticia">
-      </div>
+               <img [src]="noticiaInd.imagen" [alt]="noticiaInd.titulo">
+            </div>
          }
         <p class="texto-noticia">{{ noticiaInd.texto }}</p>
         <p class="fecha-noticia">{{ noticiaInd.fechaPublicacion }}</p>

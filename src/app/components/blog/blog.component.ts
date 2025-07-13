@@ -18,16 +18,27 @@ export class BlogComponent {
   };
   noticias: IEntradaBlog[] = [
     {
-      titulo: 'Noticia 1',
-      imagen: 'https://placeholder.co/150X150',
-      texto: 'Texto de la noticia 1',
-      fechaPublicacion: '10-04-2025'
+      titulo: `Un coche atropella a un motero en un semáforo y luego pisa a fondo. 
+      Lo que no sabía es que llevaba una cámara grabando en el casco, y ahora irán a juicio`,
+      imagen: 'https://img.remediosdigitales.com/0b1232/guante/1366_2000.jpeg',
+      texto: `Un motorista detenido en un semáforo fue embestido por detrás y arrastrado varios metros por un coche en Riverside (California), 
+      mientras lo grababa todo con su cámara de casco. Ahora, ese mismo vídeo será clave en el juicio contra el conductor. En la grabación, 
+      difundida por medios estadounidenses y ampliamente compartida en redes sociales, se ve cómo un Nissan Altima negro acelera 
+      repentinamente y golpea la moto por detrás, empujando al motorista y a su vehículo sobre la acera, sin frenar en ningún momento. 
+      El impacto lo inmoviliza durante varios segundos bajo el coche... A propósito.`,
+      fechaPublicacion: '10-07-2025'
+      
     },
     {
-      titulo: 'Noticia 2',
-      imagen: 'https://placeholder.co/150X150',
-      texto: 'Texto de la noticia 2',
-      fechaPublicacion: '03-07-2025'
+      titulo: 'En Reino Unido van a empezar a multar a los moteros que rueden en grupo por "incívicos", y bastará solo con que vayan dos',
+      imagen: 'https://img.remediosdigitales.com/087f05/moto-1-2025/1366_2000.jpeg',
+      texto: `Una ciudad británica quiere prohibir las rutas en moto cuando circulen más de dos vehículos juntos. 
+      El Ayuntamiento de Newcastle-under-Lyme, en el centro de Inglaterra, 
+      ha propuesto una medida dentro de una "Public Spaces Protection Order" (PSPO) 
+      que busca restringir las reuniones de vehículos en vías públicas y espacios abiertos.
+      Si se aprueba, cualquier grupo de dos o más vehículos, incluyendo motos, necesitará una autorización oficial 
+      para reunirse, bajo amenaza de multa. 100 libras por andar en moto en grupo`,
+      fechaPublicacion: '11-07-2025'
     }
   ];
 
