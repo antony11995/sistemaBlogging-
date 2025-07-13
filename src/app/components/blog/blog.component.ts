@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IEntradaBlog } from '../../interfaces/ientrada-blog.interface';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-blog',
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })
@@ -19,13 +19,13 @@ export class BlogComponent {
   noticias: IEntradaBlog[] = [
     {
       titulo: 'Noticia 1',
-      imagen: 'https://via.placeholder.com/150',
+      imagen: 'https://placeholder.co/150X150',
       texto: 'Texto de la noticia 1',
       fechaPublicacion: '10-04-2025'
     },
     {
       titulo: 'Noticia 2',
-      imagen: 'https://via.placeholder.com/150',
+      imagen: 'https://placeholder.co/150X150',
       texto: 'Texto de la noticia 2',
       fechaPublicacion: '03-07-2025'
     }
